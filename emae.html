@@ -1,0 +1,145 @@
+<emae html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+                    .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+
+        .menu li {
+            padding: 10px 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: aqua;
+        }
+
+        /* Каталог */
+        .catalog {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .catalog li {
+            background-color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .catalog a {
+            text-decoration: none;
+            color: yellow;
+            font-weight: bold;
+        }
+
+        .catalog li:hover {
+            background-color: darkblue;
+        }
+
+        .catalog li:hover a {
+            color: aqua;
+        }
+        </style>
+        <div class="navbar">
+            <ul class="menu">
+                <li><a href="klayn.html">Home</a></li>
+                <li><a href="Vechicles.html">Vehicles</a></li>
+                <li><a href="jewelry.html">Jewelry</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="keno.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div style="margin-top: 1%;">
+        <h2>
+            <img src="data:image/png;base64,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" style="margin-left:16%;margin-top: 1%;width: 20%;height:20% ;">
+        </div></h2>
+        <h1 style="margin-left: 20px; margin-right: 500px;font-family: 'Times New Roman', Times, serif;margin-top:-10% ;"><p><b><i>Ferrari SF90 Stradale</i></b></p></h1>
+        <h3 .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .image-container img {
+            width: 100%; /* Растягиваем картинку */
+            height: auto;
+        }
+        
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+            padding: 10px 20px;
+         
+            
+            border-radius: 5px;
+        }
+        </h3> 
+    </h3>
+    <div style="margin-left:50%;margin-top: -5%;">
+     <hp><b><i>SF90 Stradale оснащена уникальной силовой установкой: впервые в серийном автомобиле Ferrari используется гибридная система типа PHEV (Plug-in Hybrid Electric Vehicle, гибридный автомобиль с подзарядкой от электросети), где двигатель внутреннего сгорания работает совместно с тремя электродвигателями, два из которых являются независимыми и расположены на передней оси, а третий установлен в задней части автомобиля между двигателем и коробкой передач</i></b></p></h4>
+      </div>  
+     <div class="background-container"style="margin right:40% ;margin-top: -1%;">
+             <img src="https://www.amalgamcollection.com/cdn/shop/products/FerrariSF90Stradale1.8Scale-Custom-Front_grande.jpg?v=1612891619"style="height: 60%;width:50%;margin-left:50%;">
+        </div>
+    </h3>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    </body>
+    </html>
