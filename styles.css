@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 300px; /* Элемент будет занимать минимум 300px, но может растягиваться */
+}
+/* Для экранов шириной 768px и больше (например, планшеты и ПК) */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Для экранов шириной меньше 768px (например, мобильные устройства) */
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    .item {
+        flex: 1 1 100%; /* Элементы становятся на весь экран */
+    }
+}
