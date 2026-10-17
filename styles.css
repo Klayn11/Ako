@@ -1,24 +1,36 @@
+* {
+    box-sizing: border-box;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 .item {
-    flex: 1 1 300px; /* Элемент будет занимать минимум 300px, но может растягиваться */
+    flex: 1 1 300px;
+    min-width: 0;
 }
-/* Для экранов шириной 768px и больше (например, планшеты и ПК) */
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 @media screen and (min-width: 768px) {
     .container {
-        width: 80%;
+        width: 90%;
     }
 }
-
-/* Для экранов шириной меньше 768px (например, мобильные устройства) */
 @media screen and (max-width: 767px) {
     .container {
         width: 100%;
+        padding: 0 15px;
+        gap: 15px;
     }
     .item {
-        flex: 1 1 100%; /* Элементы становятся на весь экран */
+        flex: 1 1 100%;
     }
 }
