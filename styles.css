@@ -10,94 +10,116 @@ html {
 
 body {
     margin: 0;
-    padding: 10px;
+    padding: 0;
     width: 100%;
     max-width: 100%;
     font-family: Arial, sans-serif;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 12px;
+.navbar {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 16px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.catalog-title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin: 20px 10px;
+}
+
+.content {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-.item {
-    flex: 1 1 220px;
-    min-width: 0;
+.content h1,
+.content h2,
+.content h3,
+.content p {
     max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
 }
 
-img,
-video,
-iframe {
+.description {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    color: rgb(121, 121, 121);
+    line-height: 1.5;
+}
+
+.hero-video video {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-img {
+.news-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.news-gallery img,
+.content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
-video {
-    width: 100%;
-}
-
-p,
-h1,
-h2,
-h3 {
-    overflow-wrap: anywhere;
-}
-
 @media (max-width: 600px) {
-    body {
-        padding: 6px;
+    .catalog-title {
+        font-size: 26px;
     }
 
-    .container {
+    .content {
+        padding: 12px;
+    }
+
+    .content h1 {
+        font-size: 25px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content h3,
+    .content p {
+        font-size: 16px;
+    }
+
+    .news-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
+}
 
-    .item {
-        flex: 1 1 145px;
+@media (max-width: 340px) {
+    .news-gallery {
+        grid-template-columns: 1fr;
     }
-
-    img,
-    video,
-    iframe {
-        max-width: 100%;
-    }
-}
-
-* {
-    overflow-wrap: normal;
-    word-break: normal;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-}
-
-.container {
-    width: 100%;
-}
-
-.item {
-    min-width: 0;
-    overflow-wrap: normal;
-    word-break: normal;
-}
-
-p, h1, h2, h3, a, span {
-    word-break: normal;
-    overflow-wrap: break-word;
 }
