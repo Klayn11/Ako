@@ -120,6 +120,42 @@ body {
 
 @media (max-width: 340px) {
     .news-gallery {
+        
+.content,
+.content section,
+.content h1,
+.content h2,
+.content h3,
+.content p {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 8px;
+    }
+
+    .content h1,
+    .content h2,
+    .content h3,
+    .content p {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
         grid-template-columns: 1fr;
     }
 }
