@@ -76,3 +76,28 @@ h3 {
         max-width: 100%;
     }
 }
+
+* {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.item {
+    min-width: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+p, h1, h2, h3, a, span {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
