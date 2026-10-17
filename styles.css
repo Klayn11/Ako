@@ -4,59 +4,75 @@
 }
 
 html {
+    width: 100%;
     overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    padding: 10px;
+    width: 100%;
     max-width: 100%;
     font-family: Arial, sans-serif;
-}
-
-img,
-video {
-    max-width: 100%;
-    height: auto;
+    overflow-x: hidden;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 90%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .item {
-    flex: 1 1 300px;
+    flex: 1 1 220px;
     min-width: 0;
+    max-width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+img,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    object-fit: contain;
+}
+
+video {
+    width: 100%;
+}
+
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 6px;
+    }
+
     .container {
-        width: 100%;
-        padding: 0 15px;
+        gap: 8px;
     }
 
     .item {
-        flex-basis: 100%;
+        flex: 1 1 145px;
     }
 
-    h1, h2, h3, p {
-        overflow-wrap: break-word;
-    }
-
-    .navbar ul {
-        flex-wrap: wrap;
-    }
-
-    .navbar ul li {
-        margin: 0 5px;
-    }
-
-    .navbar ul li a {
-        font-size: 14px;
-        padding: 10px;
+    img,
+    video,
+    iframe {
+        max-width: 100%;
     }
 }
